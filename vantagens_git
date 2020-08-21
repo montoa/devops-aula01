@@ -1,4 +1,17 @@
 Teremos que assitir o video:
 https://www.youtube.com/watch?v=6Czd1Yetaac
 
-Criar um resumo de quais as vantagens de se utilizar o git
+#Criar um resumo de quais as vantagens de se utilizar o git
+
+Uma das soluções na época era os desenvolvedores bloquearem os arquivos para que não houvesse alterações. Mas o problema era que o individuo ia embora e o cidadão do outro lado do mundo não conseguia seguir com o projeto e desenvolvimento da aplicação.  Nas palavras do Akita, um lixo na prática. Mas era um avanço, pois antes disso tinha vários soluções de SVN, mas com resultados ruins. 
+O github usa git por baixo. Ou seja não precisa de github para usar git. O github é somente um facilitador, é opcional.
+Você faz o git clone para realizar a cópia do projeto para sua máquina, faz as modificações necessárias, edita arquivos, cria um novo, renomeia outro etc. Quando finalizar você faz um git add para marcar as operações, e logo após um git commit para empacotar essas alterações.
+A idéia é que os dados sejam sempre confiáveis dentro do repossitório, ou seja que todos os arquivos estejam sempre corretos.  E para isso usa-se um algoritimo um hash do path. Uma assinatura. 
+Outra vantagem é que ele cria um diretório chamado.git.  Ou seja todo conteúdo verdadeiro fica dentro deste diretório oculto. Então se você cria um projeto ou vários projetos, você poderá apagar qualquer arquivo que devido a diretório oculto você consegue recuperar usando o comando git checkout. Por isso você consegue muda de branch no mesmo diretório, arquivos some e aparecem.
+Você pode usar medatas que também são objetos, usando uma area intermediaria do git onde estaciona suas modificações.  Ou seja conseguimos fazer uma manipulação de repositório git local que é basicamento banco local de objetos. Ou seja qualquer manipulação dentro do repositório git é gerado um SHA. Como se fosse um validador da validade do dados da informação.
+Outra das vantegens no git é que ele ratreia o conteúdo e depois os metadados. Ou seja evita-se o conflito.
+Todo branch tem sua informação a partir da origem a partir que qual commit começa um branch. Vamos a um exemplo:
+Temos dois desenvolvedores ficticios. Alice e Bob. Cada um tem uma cópia do projeto.Em um determinado momento precisamos mergiar o trabalho dos dois. Abre o arquivo da alice e encontra o comando Print(“hello”);, na linha 30. Depois abre o mesmo arquivo do Bob Print(“bye”); na linha 30, mas como apenas o nome diferente. E agora. Um SVS olha para esse dois arquivos  e teras que interromper o processo de merge porque ele não como decidir, qual das duas linhas é valida. Agora imagine isso com milhares de desenvolvedor e arquivos num mesmo projeto.
+A diferença  é que o git pode voltar no passado e olhar o arquivo até o ponto onde o branch foi criado e comparar o arquivo original. Ai o git pode escolher usar a versão correta. 
+Outra vantagem é que de qualquer lugar do mundo você pode fazer um push e continuar com seu projeto. Você pode fazer um git clone de um reposítório usando o git orign. A forma como todo mundo usa git, é somente umas das formas para se trabalhar.
+
